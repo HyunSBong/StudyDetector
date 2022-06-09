@@ -2,7 +2,9 @@
 YOLO v5를 이용하여 공부에 집중하도록 감시해주는 애플리케이션 개발 프로젝트입니다.
 
 # Workflow
-
+<img width="1510" alt="스크린샷 2022-06-09 오후 9 32 52" src="https://user-images.githubusercontent.com/69189272/172847862-0c0b023d-d24d-48ce-af02-651d62d24741.png">
+<img width="1482" alt="스크린샷 2022-06-09 오후 9 32 59" src="https://user-images.githubusercontent.com/69189272/172847853-f743f0ab-4dc8-4743-b765-2450aca77b7b.png">
+<img width="1490" alt="스크린샷 2022-06-09 오후 9 33 04" src="https://user-images.githubusercontent.com/69189272/172847824-66d26e4b-a5ae-4755-957d-1f2501f0c984.png">
 
 <br>
 
