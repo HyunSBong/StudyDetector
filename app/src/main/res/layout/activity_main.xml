@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/main_bannerr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="fitXY"
+                android:background="#002967"
+                android:src="@drawable/main_banner"/>
+
+            <TextView
+                android:id="@+id/banner_today"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="날짜를 불러오지 못했어요.."
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintEnd_toEndOf="@id/main_bannerr"
+                app:layout_constraintTop_toTopOf="@+id/main_bannerr" />
+
+            <TextView
+                android:id="@+id/summary"
+                app:layout_constraintTop_toBottomOf="@+id/main_bannerr"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summary"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/summary_today"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/summary"
+                app:layout_constraintTop_toTopOf="@+id/summary" />
+
+            <TextView
+                android:id="@+id/summary_today_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/CustomConstraint"
+                app:layout_constraintEnd_toEndOf="@+id/btn_calendar"
+                app:layout_constraintTop_toTopOf="@+id/CustomConstraint"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/summary_today2"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="오늘 목표 공부량"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/summary_today"
+                app:layout_constraintTop_toTopOf="@+id/summary_today" />
+
+
+            <TextView
+                android:id="@+id/summary_today_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="10시간"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btn_calendar"
+                app:layout_constraintTop_toTopOf="@+id/summary_today_content" />
+
+            <TextView
+                android:id="@+id/summary_today3"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="총 공부량"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/summary_today2"
+                app:layout_constraintTop_toTopOf="@+id/summary_today2" />
+
+
+            <TextView
+                android:id="@+id/summary_today_content3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="8dp"
+                android:text="3시간"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btn_calendar"
+                app:layout_constraintTop_toTopOf="@+id/summary_today_content2" />
+
+
+            <ImageButton
+                android:id="@+id/btn_calendar"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calendar_ic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_bannerr"
+                tools:ignore="MissingConstraints"/>
+
+            <ImageView
+                android:id="@+id/CustomConstraint"
+                app:layout_constraintTop_toBottomOf="@+id/summary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/CustomConstraint"
+                app:layout_constraintTop_toTopOf="@id/CustomConstraint"
+                app:layout_constraintEnd_toEndOf="@id/CustomConstraint"
+                />
+
+            <TextView
+                android:id="@+id/today_study_list"
+                app:layout_constraintTop_toBottomOf="@+id/CustomConstraint"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 공부 기록"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_set_study"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/floating_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CustomConstraint"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/bg_today_study_list"
+                app:layout_constraintTop_toBottomOf="@+id/today_study_list"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="460dp" />
+            <!--                android:src="@drawable/home_recomm_story_shadow_box"-->
+            <!--                />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:overScrollMode="never"
+
+                app:layout_constraintStart_toStartOf="@id/bg_today_study_list"
+                app:layout_constraintTop_toTopOf="@id/bg_today_study_list"
+                app:layout_constraintEnd_toEndOf="@id/bg_today_study_list"
+                app:layout_constraintBottom_toBottomOf="@id/bg_today_study_list"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

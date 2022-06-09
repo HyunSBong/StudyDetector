@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    tools:context=".ui.profile.TimelineAddActivity">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainttop"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    <TextView
+        android:id="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공부 추가"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <ImageButton
+        android:id="@+id/btn_cancle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        android:scaleType="fitCenter"
+        android:background="@color/white"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_ic"/>
+
+        <ImageButton
+            android:id="@+id/btn_apply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/check_selected_btn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/v_bar"
+        app:layout_constraintTop_toBottomOf="@+id/constrainttop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3e3e3"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/custom_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_bar">
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/view_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mcv_tileHeight="50dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/study_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_calendar"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/study_name_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/study_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="예) GAN 논문 읽기"
+        android:layout_height="50dp"
+        android:singleLine="true">
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/study_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/study_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:text="공부시간"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/study_time_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/study_time"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="예) 3시간"
+        android:layout_height="50dp"
+        android:singleLine="true">
+    </EditText>
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_startDate"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/study_time"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="시작"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:background="@drawable/category_border"-->
+<!--        android:paddingTop="5dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:paddingStart="16dp"-->
+<!--        android:paddingEnd="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginStart="16dp"/>-->
+<!--&lt;!&ndash;        android:onClick="showStartDatePickerDialog" />&ndash;&gt;-->
+
+<!--    <View-->
+<!--        android:id="@+id/v_date_bar"-->
+<!--        app:layout_constraintStart_toEndOf="@id/btn_startDate"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btn_startDate"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btn_startDate"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btn_endDate"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:background="@color/black"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_endDate"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/btn_startDate"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/btn_startDate"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/v_date_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="종료"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:background="@drawable/category_border"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:paddingTop="5dp"-->
+<!--        android:paddingBottom="5dp"-->
+<!--        android:paddingStart="16dp"-->
+<!--        android:paddingEnd="16dp"/>-->
+<!--        android:onClick="showEndDatePickerDialog" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/study_category"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_startDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="유형"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"/>-->
+
+<!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:columnCount="5">-->
+<!--        <RadioButton-->
+<!--            a-->
+<!--    </GridLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

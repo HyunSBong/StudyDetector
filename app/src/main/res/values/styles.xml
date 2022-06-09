@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorBackground</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="AppTheme.StatusBar" parent="AppTheme">
+    </style>
+</resources>
