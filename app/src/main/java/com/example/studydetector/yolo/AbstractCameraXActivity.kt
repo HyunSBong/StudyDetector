@@ -126,11 +126,6 @@ abstract class AbstractCameraXActivity<R> : BaseModuleActivity() {
                         );
                         CoroutineScope(Dispatchers.IO).launch {
                             db!!.studyDAO().insert(elem)
-                            Log.d("수신한 intent", "------------------------------------------------------------")
-                            Log.d("수신한 intent : name", intent.extras!!.getString("name") + "------------------------------------------------------------")
-                            Log.d("수신한 intent : date", intent.extras!!.getString("date")+ "------------------------------------------------------------")
-                            Log.d("수신한 intent : study_time", intent.extras!!.getString("studyTime") + "------------------------------------------------------------")
-
                             withContext(Dispatchers.Main) {
                                 adapter.notifyDataSetChanged()
                             }

@@ -52,7 +52,9 @@ class SetStudyActivity : AppCompatActivity() {
             val intent = Intent(this@SetStudyActivity, StudyPrepare::class.java)
             intent.putExtra("name", study_name_input_txt.getText().toString())
             intent.putExtra("date", dateFormat.format(date).toString())
-            intent.putExtra("studyTime", study_time_input_txt.getText().toString())
+            var studyTimeToHour = Integer.parseInt(study_time_input_txt.getText().toString())
+            studyTimeToHour *= 3600
+            intent.putExtra("studyTime", studyTimeToHour.toString())
             startActivity(intent)
             finish()
         }

@@ -30,7 +30,8 @@ class DBAdapter (private var dataset: MutableList<StudyTable>): RecyclerView.Ada
         val binding = (holder as MyViewHolder).binding
         var int_study_time = Integer.parseInt((dataset[position].studyTime).toString()) / 60
         var min_study_time = int_study_time.toDouble() / 60 // 분 단위로 변경
-        var double_goal_time = (Integer.parseInt((dataset[position].goalTime).toString())).toDouble()
+
+        var double_goal_time = (Integer.parseInt((dataset[position].goalTime).toString()) / 3600).toDouble()
         var cal_study_time = min_study_time / double_goal_time * 100
         var result = cal_study_time.toInt()
 
@@ -40,7 +41,7 @@ class DBAdapter (private var dataset: MutableList<StudyTable>): RecyclerView.Ada
         Log.d("최종 퍼센트", cal_study_time.toString())
         binding.listTitle.text = dataset[position].name
         binding.listDate.text = dataset[position].date
-        binding.listTime.text = (dataset[position].goalTime).toString() + "시간"
+        binding.listTime.text = (Integer.parseInt((dataset[position].goalTime).toString()) / 3600).toString() + "시간"
         binding.listPercentage.text = result.toString() + "%"
     }
 }

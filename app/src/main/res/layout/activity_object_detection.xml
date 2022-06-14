@@ -6,8 +6,6 @@
     android:background="@color/white"
     android:fitsSystemWindows="true">
 
-
-
     <LinearLayout
         android:id="@+id/main_banner"
         app:layout_constraintStart_toStartOf="parent"

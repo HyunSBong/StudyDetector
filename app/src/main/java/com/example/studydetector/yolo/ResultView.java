@@ -61,7 +61,8 @@ public class ResultView extends View {
 
             // 예측 결과 텍스트 박스
             Path mPath = new Path();
-            RectF mRectF = new RectF(result.rect.left, result.rect.top, result.rect.left + TEXT_WIDTH,  result.rect.top + TEXT_HEIGHT);
+            RectF mRectF = new RectF(result.rect.left, result.rect.top, result.rect.left + TEXT_WIDTH,
+                    result.rect.top + TEXT_HEIGHT);
             mPath.addRect(mRectF, Path.Direction.CW);
             mPaintText.setColor(Color.MAGENTA);
             canvas.drawPath(mPath, mPaintText);
@@ -71,7 +72,8 @@ public class ResultView extends View {
             mPaintText.setStrokeWidth(0);
             mPaintText.setStyle(Paint.Style.FILL);
             mPaintText.setTextSize(32);
-            canvas.drawText(String.format("%s %.2f", PrePostProcessor.mClasses[result.classIndex], result.score), result.rect.left + TEXT_X, result.rect.top + TEXT_Y, mPaintText);
+            canvas.drawText(String.format("%s %.2f", PrePostProcessor.mClasses[result.classIndex], result.score),
+                    result.rect.left + TEXT_X, result.rect.top + TEXT_Y, mPaintText);
         }
     }
 
